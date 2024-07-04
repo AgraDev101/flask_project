@@ -1,0 +1,11 @@
+python -m venv .venv
+
+.venv\Scripts\activate
+
+pip install Flask
+
+pip install flask_cors
+
+from flask_cors import CORS
+
+app.config['CORS_HEADER'] = 'application/json'
