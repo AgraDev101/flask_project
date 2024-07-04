@@ -6,6 +6,15 @@ from short_url_api import short_url_api
 
 app = Flask(__name__)
 
+app.register_blueprint(weather_api)
+app.register_blueprint(tasks_api)
+app.register_blueprint(short_url_api)
+
+# use "python app.py" to run
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
 # @app.route("/")
 # def home():
 #     x = 12
@@ -54,12 +63,3 @@ app = Flask(__name__)
 #             return "deleted"
 #     except Exception as e:
 #         return {"message": "query didn't run"}
-        
-app.register_blueprint(weather_api)
-app.register_blueprint(tasks_api)
-app.register_blueprint(short_url_api)
-
-if __name__ == "__main__":
-    app.run(debug=True)
-
-# use "python app.py" to run
