@@ -8,6 +8,6 @@ url = "https://www.weatherunion.com/gw/weather/external/v0/get_locality_weather_
 @weather_api.route("/weather")
 def get_weather():
     # url = "https://www.weatherunion.com/gw/weather/external/v0/get_locality_weather_data?locality_id=ZWL008554"
-    res = requests.get(url, headers={ "x-zomato-api-key" :"8cb38695530a16503e8ccf3af55736fd"})
+    res = requests.get(url, headers={ "x-zomato-api-key" :"enter api key here"})
     print(res.json())
     return jsonify({"data": res.json()})
